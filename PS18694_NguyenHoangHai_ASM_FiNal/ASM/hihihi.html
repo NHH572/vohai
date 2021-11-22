@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .page-wrapper {
+            position: absolute;
+            left: 250px;
+            margin: 20px;
+            padding: 20px;
+
+        }
+
+        .anh img {
+            position: absolute;
+            top: 1px;
+            left: 500px;
+            width: 500px;
+            height: 600px;
+            margin-top: 50px;
+
+        }
+
+        .content-page {
+            font-size: 25px;
+        }
+
+        .ten {
+            margin-top: 10px;
+
+        }
+
+        .content-page h1 {
+            font-size: 25px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        //1. khai báo 1 mảng hình
+        var mang = [];
+        var index = 0;
+
+        // function load() {
+        //     for (var i = 0; i <= 5; i++) {
+        //         //4. cấp phát đối tượng hình cho phần tử i của mảng
+        //         mang[i] = new Image();
+        //         mang[i].src = "images/" + i + ".jpg";
+        //     }
+        // }
+
+        function first() {
+            //1. Hiển thị hinh thứ 0 index = 0
+            index = 0;
+            document.getElementById("hinh").src = mang[index].src;
+        }
+
+        function last() {
+            //1. Hiển thị hinh thứ 0 index = 0
+            index = mang.length - 1;
+            document.getElementById("hinh").src = mang[index].src;
+        }
+
+        function previous() {
+            //7 hiển thị hình thứ index -1;
+            if (index > 0) {
+                index = index - 1;
+                document.getElementById("hinh").src = mang[index].src;
+            }
+        }
+
+        function next() {
+            //7 hiển thị hình kế tiếp = index +1;
+            if (index < mang.length - 1) {
+                index = index + 1;
+                document.getElementById("hinh").src = mang[index].src;
+            }
+        }
+    </script>
+</head>
+
+<body onload="load();">
+    <div class="ten">
+        <center>
+            <h1><u>Giới Thiệu</u></h1>
+        </center>
+    </div>
+    <div class="page-wrapper">
+        <div class="heading-page">
+
+            <br><br>
+        </div>
+        <div class="wrapbox-content-page">
+            <div class="content-page ">
+                <div ng-app=""ng-init="Cho= {ten : 'Võ Hoàng Hải' , tuoi : 18, sinhvien : 'Ứng dụng phần mềm',lop : 'UD16317',danghoc : 'Lập trình Javascript',giaovien : 'Cao Hoàng Phúc'}">
+                    <p></p>
+                    <h1>Tên : {{Cho.ten}}</h1><br><br>
+                    <!-- <h1>Tuổi : {{Cho.tuoi}}</h1><br><br>
+                    <h1>Chuyên ngành : {{Cho.sinhvien}}</h1><br><br>
+                    <h1>Lớp : {{Cho.lop}}</h1><br><br>
+                    <h1>Đang học môn : {{Cho.danghoc}}</h1><br><br>
+                    <h1>Giáo viên : {{Cho.giaovien}}</h1><br><br> -->
+                </div>
+            </div>
+            <div class="anh">
+                <img id="hinh" src="images/aaa.jpg" height="800px" width="1200px" ;>
+                <br>
+                <button onclick="first()">first</button>
+                <button onclick="previous()">previous</button>
+                <button onclick="next()">next</button>
+                <button onclick="last()">last</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

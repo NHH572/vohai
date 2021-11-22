@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <style>
+            .abc{
+                width: 600px;
+                background-color:whitesmoke;
+                box-shadow: 0 0 8px gray;
+                margin-left:400px ;
+                margin-top: 80px;
+                padding-left: 40px;
+                font-size: 25px;
+            }
+            .txt{
+                background-color: wheat;
+                color: black;
+                border: 1px none gray;
+                text-align: left;
+                width: 560px;
+            }
+            .btn{
+                background-color: cadetblue;
+                width: 120px;
+                padding: 10px;
+                font-size: 22px;
+                border: 1px solid orangered;
+                
+            }
+            .dongcuoi{
+                text-align: right;
+            }
+            h1{
+                color: rgb(243, 156, 24);
+                font-size: 30px;
+                margin-top: 0px;
+                text-align: center;
+            }
+            #ht{
+                height: 30px;
+            }
+            #ha{
+                height: 30px;
+            }
+            #qg{
+                height: 30px;
+            }
+            #msv{
+                height: 30px;
+            }
+            #email{
+                height: 30px;
+            }
+        </style>
+            <script>
+                function cau2() {
+                    var masv = document.forms[0].masinhvien.value;
+                var hoten = document.forms[0].hoten.value;
+                var email = document.forms[0].email.value;
+                var gioitinh = document.forms[0].gt.value;
+                var hinhanh = document.forms[0].hinh.value;
+                var quocgia = document.forms[0].hinhanh.value;
+                var sothich = document.forms[0].st.value;
+                var ghichu = document.forms[0].ghichu.value;
+        
+                    if (masv == "") {
+                        alert("Username can not be empty !");
+                        return;
+                    }
+                    if (hoten == "") {
+                        alert("password can not be empty !");
+                        return;
+                    }
+                    if (email == "") {
+                        alert("password can not be empty !");
+                        return;
+                    }
+                    if (gioitinh == "") {
+                        alert("password can not be empty !");
+                        return;
+                    }
+                    if (hinhanh == "") {
+                        alert("password can not be empty !");
+                        return;
+                    }
+                    if (quocgia == "") {
+                        alert("password can not be empty !");
+                        return;
+                    }
+                    if (sothich == "") {
+                        alert("password can not be empty !");
+                        return;
+                    }
+                    if (ghichu == "") {
+                        alert("password can not be empty !");
+                        return;
+                    }
+                }
+            </script>
+    </head>
+    <body>
+        <form action="xuly.php" method="POST" class="abc" onsubmit="return cau2();">
+            <h1>Đăng ký thành viên</h1>
+            <p>
+                <label for="msv">Mã sinh viên</label><br>
+                <input type="text" name="masinhvien" id="msv" class="txt">
+            </p>
+            <p>
+                <label for="ht">Họ tên</label><br>
+                <input type="text" name="hoten" id="ht" class="txt">
+            </p>
+            <p>
+                <label for="email">Email</label><br>
+                <input type="text" name="email" id="email" class="txt" placeholder="...@gmail.com">
+            </p>
+            <p>
+                Giới tính
+                <input type="radio" name="gt"> Nam
+                <input type="radio" name="gt">Nữ
+            </p>
+            <p>
+                <label for="ha"> Hình ảnh<br></label>
+                <input type="file" id="ha" name="hinh" class="txt">
+            </p>
+            <p>
+                
+               <label for="qg"> Quốc gia:<br></label>
+                <select name="hinhanh" id="qg" class="txt">
+                <option value="1">Việt Nam</option>
+                <option value="2">Mỹ</option>
+                <option value="3">Anh</option>
+                <option value="4">Hà Lan</option>
+                </select>
+            </div>
+            </p>
+            <p>
+                Sở thích:<br>
+                <input type="checkbox" name="st">Thao thể
+                <input type="checkbox"name="st">Ẩm thực 
+                <input type="checkbox"name="st">Du lịch
+                <input type="checkbox"name="st">Mạo hiểm
+            </p>
+            <p>
+                <label for="gc"> Ghi chú<br></label>
+                <textarea name="ghichu" id="gc" class="txt" rows="10"></textarea>
+            </p>
+            <p class="dongcuoi">
+                            <!-- <input id="tk" type="submit" value="Login" /> -->
+                <input type="submit" class="btn" value="Đăng ký">
+                <!-- <button type="submit" class="btn">Đăng ký</button> -->
+                <input type="reset" class="btn" value="Reset">
+            </p>
+        </form>
+    </body>
+</html>

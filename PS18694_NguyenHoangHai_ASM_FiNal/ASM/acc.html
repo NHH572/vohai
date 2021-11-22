@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <style>
+        /* .form-group {
+            margin: 10px 2px;
+
+        }
+
+        .form-control {
+            margin: 3px 0px;
+            border: none;
+            width: 200px;
+            border-radius: 3px;
+            box-shadow: 0 0 3px blue;
+            color: orangered;
+            display: block;
+            outline: none;
+        } */
+        .abc{
+            margin-top: 100px;
+            margin-left: 900px;
+            width:400px;
+            height: 330px;
+            background-color:whitesmoke;
+            box-shadow: 0 0 5px gray;
+            border-radius: 5px;
+            text-align: justify;
+            
+            padding-top: 20px;
+            }
+            label{
+                margin-left: 20px;
+                font-size: 25px;
+            }
+            #tk{
+                width: 360px;
+                height: 50px;
+                margin-left: 20px;
+            }
+          
+            #passwork{
+                width: 360px;
+                height: 50px;
+                margin-left: 20px;
+            }
+            .text{
+                
+                position: absolute;
+                top: 130px;
+                left: 235px;
+                width: 500px;
+            }
+            .text span {
+                font-size: 100px;
+                font-family: inherit; 
+            }
+            .text strong {
+                font-size: 25px;
+            }
+    </style>
+
+
+
+    <script>
+        function cau2() {
+            var username = document.forms[0].txtUsername.value;
+            var password = document.forms[0].txtPassword.value;
+
+            if (username == "") {
+                alert("Username can not be empty !");
+                return;
+            }
+            if (password == "") {
+                alert("password can not be empty !");
+                return;
+            }
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <div class="text">
+        <span>Hoàng Hải</span>
+        <br>
+        <strong>Phong cách là một phương thức để nói lên bạn là ai mà không khiến bạn tốn một lời.</strong>
+    </div>
+    <form action="#" method="POST" onsubmit="return cau2();"class="abc">
+        <div class="form-group">
+            <div><label for="tk"> UserName:</label></div>
+            <input id="tk" type="text" name="txtUsername" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <div><label for="passwork"> Password:</label></div>
+            <input id="passwork" type="text" name="txtPassword" class="form-control">
+        </div>
+        <div class="form-group">
+            <div>
+                <label>
+                    <input type="checkbox" name="chkRememberMe">
+                    Remember Me
+                </label>
+            </div>
+        </div>
+        <hr />
+        <div class="form-group">
+            <input id="tk" type="submit" value="Login" />
+        </div>
+
+
+
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">     
+        <link href="asm.css" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.ico"/>
+        <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
+        <title>Hoàng Hải</title>
+        <script>
+            var dh = null;
+    
+            function tg() {
+                //2. lấy ngày giờ hệ thống 
+                var now = new Date();
+                //3.lấy giờ phút giây ra
+                var h = now.getHours();
+                var m = now.getMinutes();
+                var s = now.getSeconds();
+                //4. nếu giờ <10 ta thêm số '0' phía trước cho đẹp
+                if(h<10){
+                    h="0"+h;
+                }
+                if(m<10){
+                    m="0"+m;
+                }
+                if(s<10){
+                    s="0"+s;
+                }
+                document.getElementById("dongho").innerHTML = h + ":" + m + ":" + s;
+            }
+            dh = setInterval("tg()", 1000);
+    
+            function startstophd() {
+                if (dh == null) {
+                    dh = setInterval("tg()", 1000);
+                } else {
+                    clearInterval(dh);
+                    dh = null;
+                }
+            }
+            // setTimeout(function () {
+            //     alert("xin chào Tôi là Hải");
+            //     alert("Chúc ae 1 ngày tốt lành!!");
+            // }, 10000)
+
+        </script>
+    </head>
+    <body>
+        <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v10.0&appId=1094435917685705&autoLogAppEvents=1" nonce="TtSeA9pY"></script>
+        <div class="container">
+            <header>
+                <!-- <h1><a href="nhap.html" target="page">HOÀNG HẢI</a></h1> -->
+                <div class="top-right">
+                    <input type="text" name="" class="search"placeholder="Tìm kiếm..." />
+                    <a href="#" class="searchbtn">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <!-- <img src="images/kinhluc.jpg" width="38px" height="35px">
+                    <img src="images/nguoi2.jpg"  width="38px" height="35px">
+                    <img src="images/giohang.jpg" width="38px" height="35px"> -->
+                </div>
+                <div class="acc">
+                    <li><a href="acc.html" target="page">Đăng Nhập |</a></li>
+                    <li><a href="dangky.html" target="page">Đăng Ký</a></li>
+                    <!-- <p>Tài khoản</p>
+                    <input type="text" placeholder="Email hoặc số điện thoại">
+                    <p>Mật khẩu</p>
+                    <input type="text" placeholder="Mật khẩu">
+                    <button type="submit">Đăng nhập</button> -->
+                </div>
+                <div id="dongho">ĐỒNG HỒ</div>
+                <div id="nut">
+                    <button onclick="startstophd()">DỪNG</button>
+                    <button onclick="setTimeout()">NẠP LẠI</button>
+                </div>
+            </header>
+            <nav class="menu">
+                <ul>
+                    <li><a href="nhap.html" target="page">TRANG CHỦ</a></li>
+                    <li><a href="Gallery.html" target="page">GALLERY</a></li>
+                    <li>
+                        <a href="#">SẢN PHẨM</a>
+                        <ul>
+                            <li><a href="shirt.html" target="page">SHIRT</a></li>
+                            <li><a href="t-shirt.html"target="page">T-SHIRT</a></li>
+                            <li><a href="jacket.html" target="page">JACKET</a></li>
+                            <li><a href="pants.html" target="page">PANTS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sale.html"target="page">SALE</a></li>
+                    <li><a href="lienhe.html"target="page">LIÊN HỆ</a></li>
+                    <li><a href="hihihi.html"target="page">GIỚI THIỆU</a></li>
+                    <li><a href="doitra.html"target="page">THÊM NHÂN VIÊN</a></li>
+                    <!-- <li><a href="nhung.html"target="page">MEDIA</a></li>  -->
+                    <li><a href="giohang.html" target="page">GIỎ HÀNG </a></li>
+                    <li><a href="giaohang.html"target="page">GIAO HÀNG</a></li> 
+                    <li><a href="giaitri.html" target="page">GIẢ TRÍ </a></li>
+                </ul>
+                <marquee><p>XIN CHÀO QUÝ KHÁCH</p></marquee>
+            </nav>
+            <article>
+                <iframe name="page" src="nhap.html" scrolling="auto" frameborder="0"> </iframe>
+                <!-- <iframe name="page" src="tinhtien.html" scrolling="auto" frameborder="0"> </iframe> -->
+            </article>
+            <aside>
+                <li>
+                <div class="phone">
+                <img src="images/phone-call.png">
+                    Hỗ trợ/Mua hàng:0346135365
+            </div>
+            </li>
+            </aside>
+            <footer>
+                <ul>
+                    <a href="https://www.facebook.com/hhai.41"target="_blank"><img src="images/f.png" width="100px"></a>
+                    <a href="https://accounts.google.com/signin/v2/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"target="_blank"><img src="images/aaaaaaa.jpg" width="100px" height="100px"></a>                    
+                    <a href="https://www.instagram.com/hhai.41/"target="_blank"><img src="images/Instagram-icon-WHITE-800x800-2.png" width="100px"></a>
+
+                </ul>
+                <ul>
+                    <ul>
+                        <li><p><span>STORE IN VIETNAM</span></p></li>
+                        <li><p>Sài Gòn: 585/2C Sư Vạn Hạnh, Phường 13, Quận 10, TP. HCM</p></li>
+                        <li><p>Đà nẵng: 126 Lê Duẩn, Hải Châu, Đà nẵng</p></li>
+                        <li><p>Tiền Giang: 73 Lý Thường Kiệt, Phường 4, TP Mỹ Tho</p></li>
+                        <li><p>Biên Hoà: 235 Phan Trung , Tân Mai, Thành phố Biên Hòa, Đồng Nai</p></li>
+                    </ul>
+                </ul>
+                <ul>
+
+                </ul>
+                
+                
+            </footer>
+        </div>
+        
+    </body>
+</html>

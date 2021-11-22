@@ -1,0 +1,117 @@
+<style>
+    button {
+        width: 80px;
+        height: 80px;
+        border: none;
+    }
+    table {
+        margin-top: 50px;
+    }
+    h2 {
+        margin: 0;
+        text-align: center;
+    }
+</style>
+<h2>TRÒ CHƠI CARO</h2>
+<table align="center" id="tbl">
+    <tr>
+        <td><button onclick="mark(0)"></button></td>
+        <td><button onclick="mark(1)"></button></td>
+        <td><button onclick="mark(2)"></button></td>
+        <td><button onclick="mark(3)"></button></td>
+        <td><button onclick="mark(4)"></button></td>
+        <td><button onclick="mark(5)"></button></td>
+        <td><button onclick="mark(6)"></button></td>
+        <td><button onclick="mark(7)"></button></td>
+        <td><button onclick="mark(8)"></button></td>
+        <td><button onclick="mark(9)"></button></td>
+    </tr>
+    <tr>
+        <td><button onclick="mark(10)"></button></td>
+        <td><button onclick="mark(11)"></button></td>
+        <td><button onclick="mark(12)"></button></td>
+        <td><button onclick="mark(13)"></button></td>
+        <td><button onclick="mark(14)"></button></td>
+        <td><button onclick="mark(15)"></button></td>
+        <td><button onclick="mark(16)"></button></td>
+        <td><button onclick="mark(17)"></button></td>
+        <td><button onclick="mark(18)"></button></td>
+        <td><button onclick="mark(19)"></button></td>
+    </tr>
+    <tr>
+        <td><button onclick="mark(20)"></button></td>
+        <td><button onclick="mark(21)"></button></td>
+        <td><button onclick="mark(22)"></button></td>
+        <td><button onclick="mark(23)"></button></td>
+        <td><button onclick="mark(24)"></button></td>
+        <td><button onclick="mark(25)"></button></td>
+        <td><button onclick="mark(26)"></button></td>
+        <td><button onclick="mark(27)"></button></td>
+        <td><button onclick="mark(28)"></button></td>
+        <td><button onclick="mark(29)"></button></td>
+    </tr>
+    <tr>
+        <td><button onclick="mark(30)"></button></td>
+        <td><button onclick="mark(31)"></button></td>
+        <td><button onclick="mark(32)"></button></td>
+        <td><button onclick="mark(33)"></button></td>
+        <td><button onclick="mark(34)"></button></td>
+        <td><button onclick="mark(35)"></button></td>
+        <td><button onclick="mark(36)"></button></td>
+        <td><button onclick="mark(37)"></button></td>
+        <td><button onclick="mark(38)"></button></td>
+        <td><button onclick="mark(39)"></button></td>
+    </tr>
+    <tr>
+        <td><button onclick="mark(40)"></button></td>
+        <td><button onclick="mark(41)"></button></td>
+        <td><button onclick="mark(42)"></button></td>
+        <td><button onclick="mark(43)"></button></td>
+        <td><button onclick="mark(44)"></button></td>
+        <td><button onclick="mark(45)"></button></td>
+        <td><button onclick="mark(46)"></button></td>
+        <td><button onclick="mark(47)"></button></td>
+        <td><button onclick="mark(48)"></button></td>
+        <td><button onclick="mark(49)"></button></td>
+    </tr>
+    <tr>
+        <td><button onclick="mark(50)"></button></td>
+        <td><button onclick="mark(51)"></button></td>
+        <td><button onclick="mark(52)"></button></td>
+        <td><button onclick="mark(53)"></button></td>
+        <td><button onclick="mark(54)"></button></td>
+        <td><button onclick="mark(55)"></button></td>
+        <td><button onclick="mark(56)"></button></td>
+        <td><button onclick="mark(57)"></button></td>
+        <td><button onclick="mark(58)"></button></td>
+        <td><button onclick="mark(59)"></button></td>
+    </tr>
+</table>
+<br><br>
+<div id="nut">
+    <center>
+    <!-- <button onclick="naplai()">NẠP LẠI</button> -->
+    <input type="submit" onclick="naplai()" value="NẠP LẠI">
+</center>
+</div>
+
+<script>
+    function naplai(){
+        location.reload();
+    }
+
+    var flag = true; // để chọn nhãn (true: X, false: O)
+    var count = 0; // để đếm số lần click nút trên bàn cờ
+    function mark(index) { // để điều khiển sự kiện click nút thứ index
+        var button = document.getElementsByTagName("button")[index];
+        button.innerText = flag ? "X" : "O";
+        button.style.backgroundColor = flag ? "aqua" : "yellow";
+        button.setAttribute("disabled", "true");
+        flag = !flag; // đảo cờ để lần sau hiển thị nhãn và màu nền khác
+        count++; // đếm số lần click
+        if (count == 60) {
+            alert("Game over!");
+            location.reload();
+        }
+    }
+</script>
